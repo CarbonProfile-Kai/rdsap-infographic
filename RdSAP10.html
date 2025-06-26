@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Profile | RdSAP 10 Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #063128;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .chart-container {
+            position: relative;
+            margin: auto;
+            height: 350px;
+            width: 100%;
+            max-width: 500px;
+        }
+         @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #063128, #00e0b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-transparent">
+
+    <div class="infographic-component p-4">
+        
+        <header class="text-center my-8 md:my-12 px-4">
+            <h1 class="text-4xl md:text-5xl font-black tracking-tight">RdSAP 10: A New Era of Accuracy</h1>
+            <p class="mt-4 text-lg md:text-xl text-[#3a5a54] mx-auto">The most significant update to domestic energy assessments in over a decade is here. RdSAP 10 shifts the focus from broad assumptions to a detailed, evidence-based approach. This guide visualizes what you need to know.</p>
+        </header>
+
+        <section id="shift-to-evidence" class="mb-16 md:mb-24 px-4">
+             <div class="bg-white rounded-xl shadow-lg p-6 md:p-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center md:text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold gradient-text">From Assumption to Evidence</h2>
+                        <p class="mt-4 text-[#3a5a54]">Previously, EPCs relied heavily on default values due to software limitations. RdSAP 10 demands a more granular look, requiring specific measurements and documented proof to build a true picture of a property's energy performance. This change empowers accurate, reliable assessments.</p>
+                    </div>
+                    <div>
+                        <div class="chart-container">
+                            <canvas id="assumptionVsEvidenceChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="data-collection" class="mb-16 md:mb-24 px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">The On-Site Data Revolution</h2>
+            <p class="text-center text-[#3a5a54] mx-auto mb-12">The new methodology requires assessors to collect significantly more data on-site. Here are the key areas of change where detailed observation is now mandatory.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-5xl mb-4" style="color: #00e0b8;">🪟</div>
+                    <h3 class="text-xl font-bold mb-2">Windows & Glazing</h3>
+                    <p class="text-[#3a5a54]">Every single window must be measured. Assessors now record width, height, orientation, frame material, glazing type, gap, and age for all windows, plus features like shutters.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-5xl mb-4" style="color: #00e0b8;">🏠</div>
+                    <h3 class="text-xl font-bold mb-2">Room in Roof & Basements</h3>
+                    <p class="text-[#3a5a54]">New detailed inputs are required for Room in Roof constructions and heated basements, including specific measurements and construction types to apply more accurate U-values.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-5xl mb-4" style="color: #00e0b8;">🧱</div>
+                    <h3 class="text-xl font-bold mb-2">Insulation</h3>
+                    <p class="text-[#3a5a54]">Exact thickness of wall, roof, and floor insulation must be recorded in mm. Alternative wall types for extensions can now be specified to improve assessment accuracy.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-5xl mb-4" style="color: #00e0b8;">💨</div>
+                    <h3 class="text-xl font-bold mb-2">Ventilation & Flues</h3>
+                    <p class="text-[#3a5a54]">All flue types must be documented, including open flues, boiler flues, and blocked chimneys. All mechanical ventilation systems and extractor fans must also be recorded.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-5xl mb-4" style="color: #00e0b8;">💡</div>
+                    <h3 class="text-xl font-bold mb-2">Lighting</h3>
+                    <p class="text-[#3a5a54]">The assessment moves beyond fittings to require a count of individual light bulbs, with a percentage breakdown of bulb types (e.g., LED, CFL).</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-5xl mb-4" style="color: #00e0b8;">♨️</div>
+                    <h3 class="text-xl font-bold mb-2">Heating & Renewables</h3>
+                    <p class="text-[#3a5a54]">Detailed data for heat pumps (SCOP) and Solar PV (pitch, orientation, shading) is now required. Modern tech like battery storage and PV diverters are also included.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="documentary-evidence" class="mb-16 md:mb-24 px-4">
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="order-2 md:order-1">
+                        <div class="chart-container h-[450px]">
+                            <canvas id="evidenceImpactChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="text-center md:text-left order-1 md:order-2">
+                        <h2 class="text-3xl md:text-4xl font-bold gradient-text">The Power of Proof</h2>
+                        <p class="mt-4 text-[#3a5a54]">To avoid conservative default values, providing documentary evidence is crucial. The more high-quality evidence supplied to the assessor, the more accurate the EPC rating will be. This chart shows the relative impact of providing key documents.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="strategic-advantage" class="mb-16 md:mb-24 text-center px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-10">Beyond Compliance: Your Strategic Advantage</h2>
+            <p class="text-center text-[#3a5a54] mx-auto mb-12">An accurate, evidence-backed EPC is more than a certificate. It’s the foundation for a smart, long-term decarbonisation strategy, turning compliance into a tangible, value-driven plan.</p>
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
+                <div class="bg-white rounded-xl shadow-lg p-6 w-full md:w-1/3">
+                    <p class="font-bold text-lg text-center">Detailed Data Collection</p>
+                </div>
+                <div class="text-3xl font-bold" style="color: #00e0b8;">➔</div>
+                <div class="bg-white rounded-xl shadow-lg p-6 w-full md:w-1/3">
+                    <p class="font-bold text-lg text-center">Accurate RdSAP 10 EPC</p>
+                </div>
+                <div class="text-3xl font-bold" style="color: #00e0b8;">➔</div>
+                <div class="bg-white rounded-xl shadow-lg p-6 w-full md:w-1/3">
+                    <p class="font-bold text-lg text-center">Strategic Retrofit Plan</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center py-8 border-t border-gray-200 px-4">
+             <h3 class="text-2xl font-bold">Ready to Navigate RdSAP 10?</h3>
+             <p class="text-[#3a5a54] mt-2 mb-4">If you have any questions or need support with complex properties, get in touch.</p>
+             <p class="font-semibold text-sm md:text-base break-words">
+                <span class="font-bold">E:</span> info@carbonprofile.co.uk | <span class="font-bold">T:</span> 01865 865403 | <span class="font-bold">W:</span> www.carbonprofile.co.uk
+             </p>
+        </footer>
+
+    </div>
+
+    <script>
+        (function() {
+            const colorPalette = {
+                primary: '#00e0b8',
+                secondary: '#29e3c1',
+                accent1: '#52e6ca',
+                accent2: '#7be9d3',
+                accent3: '#a4ecdc',
+                textDark: '#063128',
+                textLight: '#3a5a54'
+            };
+
+            const wrapLabel = (str, maxWidth) => {
+                if (str.length <= maxWidth) return str;
+                const words = str.split(' ');
+                let lines = [];
+                let currentLine = words[0];
+                for (let i = 1; i < words.length; i++) {
+                    if ((currentLine + ' ' + words[i]).length > maxWidth) {
+                        lines.push(currentLine);
+                        currentLine = words[i];
+                    } else {
+                        currentLine += ' ' + words[i];
+                    }
+                }
+                lines.push(currentLine);
+                return lines;
+            };
+            
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                return Array.isArray(label) ? label.join(' ') : label;
+            };
+
+            const chartTooltipOptions = {
+                plugins: {
+                    tooltip: {
+                        callbacks: { title: tooltipTitleCallback },
+                        backgroundColor: '#ffffff',
+                        titleColor: colorPalette.textDark,
+                        bodyColor: colorPalette.textLight,
+                        borderColor: '#dddddd',
+                        borderWidth: 1,
+                        padding: 10,
+                        titleFont: { weight: 'bold' },
+                        bodyFont: { size: 14 }
+                    }
+                }
+            };
+
+            const assumptionVsEvidenceCtx = document.getElementById('assumptionVsEvidenceChart').getContext('2d');
+            if (assumptionVsEvidenceCtx) {
+                new Chart(assumptionVsEvidenceCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Evidence-Based Data', 'Default Assumptions'],
+                        datasets: [{
+                            label: 'Assessment Basis',
+                            data: [80, 20],
+                            backgroundColor: [colorPalette.primary, colorPalette.accent1],
+                            borderColor: '#ffffff',
+                            borderWidth: 4,
+                        }]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false, cutout: '70%',
+                        plugins: { ...chartTooltipOptions.plugins,
+                            legend: { position: 'bottom', labels: { font: { size: 14 }, color: colorPalette.textLight, padding: 20 } },
+                            title: { display: true, text: 'RdSAP 10 Assessment Basis', font: { size: 18, weight: 'bold' }, color: colorPalette.textDark, padding: { bottom: 20 } }
+                        }
+                    }
+                });
+            }
+
+            const evidenceImpactCtx = document.getElementById('evidenceImpactChart').getContext('2d');
+            if(evidenceImpactCtx) {
+                new Chart(evidenceImpactCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: [
+                            wrapLabel('Air Pressure Test Certificate', 16), 
+                            wrapLabel('Heating System Commissioning Reports', 16), 
+                            wrapLabel('Window & Door Specifications', 16), 
+                            wrapLabel('Solar PV & Battery Documentation', 16),
+                            wrapLabel('Insulation Invoices or Guarantees', 16)
+                        ],
+                        datasets: [{
+                            label: 'Impact on EPC Accuracy',
+                            data: [95, 85, 80, 75, 70],
+                            backgroundColor: [ colorPalette.primary, colorPalette.secondary, colorPalette.accent1, colorPalette.accent2, colorPalette.accent3 ],
+                            borderRadius: 5, barThickness: 25
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+                        scales: {
+                            x: { beginAtZero: true, grid: { display: false }, ticks: { display: false } },
+                            y: { grid: { display: false }, ticks: { color: colorPalette.textDark, font: { size: 12, weight: '600' } } }
+                        },
+                        plugins: { ...chartTooltipOptions.plugins,
+                            legend: { display: false },
+                             title: { display: true, text: 'Impact of Documentary Evidence on Accuracy', font: { size: 16, weight: 'bold' }, color: colorPalette.textDark, padding: { bottom: 20 } }
+                        }
+                    }
+                });
+            }
+
+            // Script to automatically resize the parent iframe
+            const sendHeight = () => {
+                const height = document.body.scrollHeight;
+                // The '*' is a wildcard for the target origin. For better security, you could replace it
+                // with your website's domain, e.g., 'https://www.carbonprofile.co.uk'
+                parent.postMessage({ infographicHeight: height }, '*');
+            };
+
+            // Send height on load and if the window is resized
+            window.onload = sendHeight;
+            window.onresize = sendHeight;
+            
+            // Also observe content changes that might affect height
+            const resizeObserver = new ResizeObserver(sendHeight);
+            resizeObserver.observe(document.body);
+
+        })();
+    </script>
+</body>
+</html>
